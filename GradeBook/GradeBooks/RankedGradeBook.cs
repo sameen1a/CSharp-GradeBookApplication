@@ -41,21 +41,28 @@ namespace GradeBook.GradeBooks
             int fortyPercent = twentyPercent + twentyPercent;
             int sixtyPercent = fortyPercent + twentyPercent;
             int eightyPercent = sixtyPercent + twentyPercent;
-            Console.WriteLine("twentyPercent of " + studentCount + " :" + twentyPercent);
-            Console.WriteLine("fortyPercent of " + studentCount + " :" + fortyPercent);
-            Console.WriteLine("sixtyPercent of " + studentCount + " :" + sixtyPercent);
-            Console.WriteLine("eightyPercent of " + studentCount + " :" + eightyPercent);
 
             if (averageGrade >= studentGrades[twentyPercent])
                 return 'A';
-            // else if (averageGrade < studentGrades[twentyPercent] && averageGrade >= studentGrades[fortyPercent])
+            else if (averageGrade >= studentGrades[fortyPercent])
+                return 'B';
+            else if (averageGrade >= studentGrades[sixtyPercent])
+                return 'C';
+            else if (averageGrade >= studentGrades[eightyPercent])
+                return 'D';
+            else
+                return 'F';
+
+            // if (averageGrade >= studentGrades[twentyPercent])
+            //     return 'A';
+            // else if (averageGrade < studentGrades[twentyPercent] & averageGrade >= studentGrades[fortyPercent])
             //     return 'B';
             // else if (averageGrade < studentGrades[fortyPercent] && averageGrade >= studentGrades[sixtyPercent])
             //     return 'C';
             // else if (averageGrade < studentGrades[sixtyPercent] && averageGrade >= studentGrades[eightyPercent])
             //     return 'D';
-            else
-                return 'F';
+            // else
+            //     return 'F';    
         }
         
     }

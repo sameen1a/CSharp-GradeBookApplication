@@ -248,6 +248,8 @@ namespace GradeBook.GradeBooks
             {
                 if (string.IsNullOrEmpty(gradeBookType))
                     gradeBookType = "Standard";
+                else if((Enum.GetName(gradebookEnum, int.Parse(gradeBookType))) == "Ranked")
+                    gradeBookType = "Ranked";
                 else
                     gradeBookType = Enum.GetName(gradebookEnum, int.Parse(gradeBookType));
             }
