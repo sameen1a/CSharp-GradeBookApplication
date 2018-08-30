@@ -48,12 +48,12 @@ namespace GradeBook.GradeBooks
 
             if (averageGrade >= studentGrades[twentyPercent])
                 return 'A';
-            else if (averageGrade < studentGrades[twentyPercent] && averageGrade >= studentGrades[fortyPercent])
-                return 'B';
-            else if (averageGrade < studentGrades[fortyPercent] && averageGrade >= studentGrades[sixtyPercent])
-                return 'C';
-            else if (averageGrade < studentGrades[sixtyPercent] && averageGrade >= studentGrades[eightyPercent])
-                return 'D';
+            // else if (averageGrade < studentGrades[twentyPercent] && averageGrade >= studentGrades[fortyPercent])
+            //     return 'B';
+            // else if (averageGrade < studentGrades[fortyPercent] && averageGrade >= studentGrades[sixtyPercent])
+            //     return 'C';
+            // else if (averageGrade < studentGrades[sixtyPercent] && averageGrade >= studentGrades[eightyPercent])
+            //     return 'D';
             else
                 return 'F';
         }
